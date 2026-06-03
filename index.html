@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema de Estoque</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Sistema de Estoque</h1>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Cadastrar Produto</h2>
+
+        <input type="file" id="foto">
+
+        <input type="text" id="nome" placeholder="Nome do Produto">
+
+        <input type="number" id="preco" placeholder="Preço">
+
+        <input type="number" id="quantidade" placeholder="Quantidade">
+
+        <button onclick="adicionarProduto()">
+            Adicionar Produto
+        </button>
+    </div>
+
+    <div class="card">
+        <h2>Pesquisar Produto</h2>
+
+        <input
+            type="text"
+            id="pesquisa"
+            placeholder="Pesquisar..."
+            onkeyup="listarProdutos()"
+        >
+    </div>
+
+    <div class="card">
+        <h2>Estoque</h2>
+
+        <div id="estoque"></div>
+    </div>
+
+    <div class="card">
+        <h2>Caixa</h2>
+
+        <select id="produtoCaixa"></select>
+
+        <input
+            type="number"
+            id="quantidadeVenda"
+            placeholder="Quantidade"
+        >
+
+        <button onclick="adicionarCarrinho()">
+            Adicionar ao Carrinho
+        </button>
+
+        <div id="carrinho"></div>
+
+        <h3>Total: R$ <span id="total">0.00</span></h3>
+
+        <button onclick="finalizarVenda()">
+            Finalizar Venda
+        </button>
+    </div>
+
+    <div class="card">
+        <h2>Histórico de Vendas</h2>
+
+        <div id="historico"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
